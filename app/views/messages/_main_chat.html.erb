@@ -24,6 +24,17 @@
     <div class="chat-text">おはよう</div>
   </div>
 </div>
+<%= form_with model: [@room, @message], html: {class: "main-form"}, local: true do |f| %>
+  <div class="message">
+    <%= f.text_field :content, class: 'input-message', placeholder: 'type a message' %>
+    <label class="input-image">
+      <span class="image-btn">画像</span>
+      <%= f.file_field :image, class: 'hidden' %>
+    </label>
+  </div>
+  <%= f.submit '送信', class: 'form-submit' %>
+<% end %>
+<!--
 <div class="main-form">
   <div class="message">
     <input class="input-message" placeholder="type a message" >
@@ -34,3 +45,4 @@
   </div>
   <input type="submit" class="form-submit" value="送信" >
 </div>
+ -->
