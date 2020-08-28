@@ -39,6 +39,9 @@
   padding: 20px 0px 40px;
   /*border: 1px solid green;*/
 }
+.room-list{
+  margin-bottom: 40px;
+}
 .room-list a{
   color: white;
   text-decoration: none;
